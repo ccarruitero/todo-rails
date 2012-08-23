@@ -14,11 +14,13 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(params[:task])
     @task.save
+		redirect_to root_url
   end
 
   def update
     @task = Task.find(params[:id])
     @task.update_attributes(params[:task])
+		redirect_to root_url
   end
 
   def destroy

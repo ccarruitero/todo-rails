@@ -11,3 +11,54 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+	background: #faf9f9;
+}
+
+.task {
+	list-style: none;
+	width: 230px;
+	height: 40px;
+	background: #cec9ca;
+	border-radius: 5px;
+	padding: 10px;
+	overflow: hidden;
+	margin: 5px;
+}
+
+.task:hover {
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
+}
+
+.task li {
+	float: left;
+}
+
+.task li:first-child {
+	width: 200px;
+}
+
+.action a {
+	text-decoration: none;
+	margin-left: 5px;
+	color: #595656;
+}
+
+.new {
+	background: #a81415;
+	width: 150px;
+	text-align: center;
+	padding: 5px;
+	border-radius: 8px;
+	font-size: 20px;
+}
+
+.new a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.new:hover {
+	background: #821011;
+}
