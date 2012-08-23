@@ -3,10 +3,9 @@
 <div class="new"><%= link_to 'New Task', new_task_path %></div>
 
 <div class="wrap">
-<% @tasks.each do |task| %>
+<% for task in @unfinished_tasks %>
 	<ul class="task">
     <li><%= task.name %></li>
-    <li><%= check_box_tag task.finished %></li>
     <li class="action"><%= link_to 'Edit', edit_task_path(task) %></li>
     <li class="action"><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></li>
 	</ul>
