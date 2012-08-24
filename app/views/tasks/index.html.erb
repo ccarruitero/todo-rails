@@ -4,11 +4,11 @@
 
 <div class="wrap">
 <% for task in @unfinished_tasks %>
-	<ul class="task">
+  <ul class="task">
     <li><%= task.name %></li>
     <li class="action"><%= link_to 'Edit', edit_task_path(task) %></li>
     <li class="action"><%= link_to 'Finish', finish_task_path(task), method: :put %></li>
     <li class="action"><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-	</ul>
+  </ul>
 <% end %>
 </div>

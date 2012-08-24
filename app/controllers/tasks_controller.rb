@@ -1,9 +1,9 @@
 class TasksController < ApplicationController
 
   def index
-		@unfinished_tasks = Task.where('finished = ?', false)
+    @unfinished_tasks = Task.where('finished = ?', false)
 
-		respond_with @unfinished_tasks
+    respond_with @unfinished_tasks
   end
 
   def new
@@ -32,9 +32,9 @@ class TasksController < ApplicationController
 		redirect_to root_url
   end
 
-	def finish
+  def finish
     @task = Task.find(params[:id])
     @task.update_attributes(finished: true)
-		redirect_to root_url
-	end
+    redirect_to root_url
+  end
 end
