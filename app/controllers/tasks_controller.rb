@@ -1,9 +1,7 @@
 class TasksController < ApplicationController
 
   def index
-    @unfinished_tasks = Task.where('finished = ?', false)
-
-    respond_with @unfinished_tasks
+    @tasks = Task.unfinished.all
   end
 
   def new

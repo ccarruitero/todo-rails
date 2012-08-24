@@ -3,7 +3,7 @@
 <div class="new"><%= link_to 'New Task', new_task_path %></div>
 
 <div class="wrap">
-<% for task in @unfinished_tasks %>
+<% for task in @tasks %>
   <ul class="task">
     <li><%= task.name %></li>
     <li class="action"><%= link_to 'Edit', edit_task_path(task) %></li>
